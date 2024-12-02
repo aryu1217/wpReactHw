@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Champion from "./Champion";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="background"></div>
+      <div className="overlay"></div>
+      <div className="content">
+        <Header />
+        <FavoriteChampion title="좋아하는 챔피언"></FavoriteChampion>
+      </div>
     </div>
   );
-}
+};
+
+const Header = () => {
+  return (
+    <div>
+      <h1>나의 취미</h1>
+      <h2>League of Legends</h2>
+    </div>
+  );
+};
+
+const FavoriteChampion = (props) => {
+  return (
+    <div className="favoritechampion">
+      <div className="favoritechampiotn">{props.title}</div>
+      <Champion title="Nidalee" line="정글" />
+      <Champion title="Reksai" line="정글" />
+      <Champion title="Leesin" line="정글" />
+    </div>
+  );
+};
 
 export default App;
