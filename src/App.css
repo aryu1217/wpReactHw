@@ -33,3 +33,22 @@
   z-index: 1; /* 배경보다 위에 배치 */
   font-family: Arial, sans-serif; /* 기본 폰트 설정 */
 }
+
+.favoritechampion {
+  display: flex; /* Flexbox 활성화 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  flex-wrap: wrap; /* 창 크기가 작아지면 줄바꿈 */
+  padding: 20px;
+  gap: 100px; /* 카드 사이 간격 */
+  margin-left: -100px;
+}
+
+.champion img {
+  width: 200px;
+  height: 200px;
+}
+
+.champion-card {
+  border: 10px;
+}

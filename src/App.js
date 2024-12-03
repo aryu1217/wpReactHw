@@ -9,7 +9,10 @@ const App = () => {
       <div className="overlay"></div>
       <div className="content">
         <Header />
-        <FavoriteChampion title="좋아하는 챔피언"></FavoriteChampion>
+        <h2>좋아하는 챔피언</h2>
+        <div className="champ-card">
+          <FavoriteChampion></FavoriteChampion>
+        </div>
       </div>
     </div>
   );
@@ -27,10 +30,10 @@ const Header = () => {
 const FavoriteChampion = (props) => {
   return (
     <div className="favoritechampion">
-      <div className="favoritechampiotn">{props.title}</div>
-      <Champion title="Nidalee" line="정글" />
-      <Champion title="Reksai" line="정글" />
-      <Champion title="Leesin" line="정글" />
+      <div className="favoritechampiotn"></div>
+      <Champion title="니달리" line="정글" />
+      <Champion title="렉사이" line="정글" />
+      <Champion title="리신" line="정글" />
     </div>
   );
 };
