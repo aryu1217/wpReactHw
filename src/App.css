@@ -1,4 +1,3 @@
-/* 배경 스타일 */
 .background {
   background-image: url("../public/ll.jpg"); /* public 폴더 기준으로 경로 설정 */
   background-size: 120%; /* 배경 이미지를 약간 확대 */
@@ -24,31 +23,50 @@
   z-index: -1; /* 배경 위, 텍스트 아래 */
 }
 
-/* 텍스트 영역 스타일 */
-.content {
-  position: relative; /* 부모 요소와 독립적으로 배치 */
-  color: white; /* 글자 색상 흰색 */
+.header {
+  position: absolute; /* 절대 위치 설정 */
+  top: 10px; /* 상단에서 10px */
+  width: 100%; /* 가로 너비 유지 */
   text-align: center; /* 텍스트 중앙 정렬 */
-  padding-top: 20vh; /* 상단 여백 추가 */
-  z-index: 1; /* 배경보다 위에 배치 */
-  font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+  margin-top: 0; /* 기존 마진 제거 */
 }
 
-.favoritechampion {
-  display: flex; /* Flexbox 활성화 */
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
-  flex-wrap: wrap; /* 창 크기가 작아지면 줄바꿈 */
-  padding: 20px;
-  gap: 100px; /* 카드 사이 간격 */
-  margin-left: -100px;
+.content {
+  position: relative; /* 기본 콘텐츠 정렬 유지 */
+  color: white;
+  text-align: center;
+  padding-top: 20vh; /* 나머지 콘텐츠 위치 유지 */
+  z-index: 1;
+  font-family: Arial, sans-serif;
 }
 
-.champion img {
+.champion-img img {
   width: 200px;
   height: 200px;
+  border-radius: 5px;
+}
+
+.champList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap; /* 창 크기가 작아지면 줄바꿈 */
+  align-items: flex-start; /* 카드 개별 정렬 */
 }
 
 .champion-card {
-  border: 10px;
+  background-color: rgba(0, 0, 0, 0.45);
+
+  width: 270px; /* 카드 너비를 고정 */
+  max-width: 270px; /* 최대 너비 고정 */
+  box-sizing: border-box; /* 패딩 포함 너비 계산 */
+
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  white-space: pre-wrap; /* 줄바꿈 허용 */
+  word-wrap: break-word; /* 긴 단어도 줄바꿈 허용 */
 }
