@@ -1,16 +1,15 @@
 .background {
-  background-image: url("../public/ll.jpg"); /* public 폴더 기준으로 경로 설정 */
-  background-size: 120%; /* 배경 이미지를 약간 확대 */
-  background-position: center; /* 이미지 중앙 정렬 */
-  background-attachment: scroll; /* 스크롤 시 배경이 따라 움직임 */
+  background-image: url("https://res.cloudinary.com/dzw5yj6jm/image/upload/v1734319514/ll_jimein.webp");
+  background-size: 140%;
+  background-position: center;
+  background-attachment: scroll;
   background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
-  /* filter: blur(6px); 배경 블러 효과 */
-  height: 100%; /* 콘텐츠 높이에 맞춤 */
-  width: 100%; /* 화면 전체 너비 */
-  position: fixed; /* 화면 고정 */
+  height: 100%;
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: -2; /* 내용 뒤에 배치 */
+  z-index: -2;
 }
 
 .overlay {
@@ -24,10 +23,10 @@
 }
 
 .header {
-  position: absolute; /* 절대 위치 설정 */
-  top: 10px; /* 상단에서 10px */
-  width: 100%; /* 가로 너비 유지 */
-  text-align: center; /* 텍스트 중앙 정렬 */
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
   margin-top: 0; /* 기존 마진 제거 */
 }
 
@@ -59,7 +58,7 @@
 
   width: 270px; /* 카드 너비를 고정 */
   max-width: 270px; /* 최대 너비 고정 */
-  box-sizing: border-box; /* 패딩 포함 너비 계산 */
+  box-sizing: border-box;
 
   padding-left: 30px;
   padding-right: 30px;
@@ -69,4 +68,37 @@
   border-radius: 10px;
   white-space: pre-wrap; /* 줄바꿈 허용 */
   word-wrap: break-word; /* 긴 단어도 줄바꿈 허용 */
+}
+
+.champion-card:hover {
+  animation: bounce 0.5s ease-in-out;
+}
+
+.champion-proficiency {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.star {
+  color: #ffe146;
+}
+
+.toggle-arrow {
+  margin-top: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  width: 250px;
+  height: 18px;
+  margin-left: -20px;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* 위로 10px 튕기기 */
+  }
 }

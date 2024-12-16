@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaStar, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Champion = (props) => {
-  const imageUrl = `/${props.champ.title}.jpeg`;
+  const imageUrl = props.champ.img_url;
 
   const [champExpanded, setChampExpanded] = useState(false);
 
@@ -14,21 +14,22 @@ const Champion = (props) => {
     <div className="champion-card">
       <div className="champion-img">
         <a
-          href={`https://namu.wiki/w/${props.champ.title}`}
+          href={`https://www.op.gg/champions/${props.champ.ename}/build`}
           target="_blank"
           rel="noreferrer"
         >
           <img
             src={imageUrl}
-            alt={props.champ.title}
+            alt={props.champ.name}
             className="champion-image"
           />
         </a>
       </div>
       <div className="champion-content">
-        <h3>{props.champ.title}</h3>
+        <h3>{props.champ.name}</h3>
         <h3>{props.champ.line}</h3>
-        <div>
+        <div className="champion-proficiency">숙련도</div>
+        <div className="star">
           {[...Array(props.champ.proficiency)].map((_, index) => (
             <FaStar key={index} />
           ))}
