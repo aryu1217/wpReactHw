@@ -4,7 +4,7 @@ import Champion from "./Champion";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const SERVER_URL = "http://localhost:8080/champ";
+const SERVER_URL = "https://wphwbackend.onrender.com/";
 
 const App = () => {
   const [champions, setChampions] = useState([]);
